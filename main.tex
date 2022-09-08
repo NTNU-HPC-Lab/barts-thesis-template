@@ -14,6 +14,7 @@
 \usepackage{scrextend}
 \usepackage{lipsum}
 \usepackage[ruled,vlined]{algorithm2e}
+\usepackage[resetlabels]{multibib}
 \usepackage{fancyhdr}
 \usepackage{styles}
 \usepackage{mathptm}
@@ -41,10 +42,7 @@
 \def\changemargin#1#2{\list{}{\rightmargin#2\leftmargin#1}\item[]}
 \let\endchangemargin=\endlist 
 
-%\addbibresource{references.bib}
-
-%\title{3D Shape Matching and Retrieval through Local Contours}
-
+\newcites{Paperone}{References}
 
 
 \begin{document}
@@ -71,6 +69,12 @@
 
 \bibliographystyle{unsrt}
 \bibliography{references.bib}
+
+\part{Selected Publications}
+
+\input{chapters/papers/paperspreamble}
+
+\input{chapters/papers/paper1/paper1}
 
 \appendix
 \input{appendices/a-appendix.tex}
